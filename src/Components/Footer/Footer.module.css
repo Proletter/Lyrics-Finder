@@ -1,0 +1,6 @@
+.footer {
+    height: 2.8em;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+}
