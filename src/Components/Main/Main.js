@@ -2,7 +2,7 @@ import styles from './Main.module.css'
 import React from 'react'
 
 
-function main(props){
+function main({setSearch, searchValue, isSearching, results}){
 
 
     return(
@@ -10,7 +10,8 @@ function main(props){
             <div>
                 <div className="form_part">
                 <label className={styles.search} htmlFor="inpt_search">
-			<input type="text" onChange={props.getLyrics} value={props.searchValue} />
+			<input type="text" onChange={setSearch} value={searchValue} />
+    {isSearching? <div>isSearching....</div>:<div>{results}</div>}
 		</label>
 
                 </div>
